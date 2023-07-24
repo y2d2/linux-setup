@@ -61,6 +61,7 @@ sudo apt-get -y install ruby sl indicator-multiload figlet toilet gem tree exube
 
 if [ "$var22" = "$var2" ] 
 then 
+	echo "$var2 $var22 "
 	sudo apt-get -y install exfatprogs
 else 
 	sudo apt-get -y install exfat-utils

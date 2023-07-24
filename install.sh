@@ -37,6 +37,7 @@ $docker && git submodule update --init --recursive --recommend-shallow
 ! $docker && git submodule update --init --recursive
 
 var1="18.04"
+var22="22.04"
 var2=`lsb_release -r | awk '{ print $2 }'`
 [ "$var2" = "$var1" ] && export BEAVER=1
 
@@ -56,7 +57,14 @@ else
 fi
 
 # other stuff
-sudo apt-get -y install ruby sl indicator-multiload figlet toilet gem tree exuberant-ctags xclip xsel exfat-fuse exfat-utils blueman autossh jq xvfb gparted espeak ncdu
+sudo apt-get -y install ruby sl indicator-multiload figlet toilet gem tree exuberant-ctags xclip xsel exfat-fuse blueman autossh jq xvfb gparted espeak ncdu
+
+if [ "$var22" = "$var2" ] 
+then 
+	sudo apt-get -y install exfatprogs
+else 
+	sudo apt-get -y install exfat-utils
+fi
 
 if [ "$unattended" == "0" ]
 then

@@ -114,7 +114,7 @@ while true; do
           sudo pip3 install clang
         else
           # if 20.04, just install python3-clang from apt
-          sudo apt-get -y install python3-clang 
+          sudo apt-get -y install python3-dev 
         fi
         # install prequisites for YCM
         sudo apt-get -y install clangd-11

@@ -119,7 +119,7 @@ while true; do
         # install prequisites for YCM
         sudo apt-get -y install clangd-11
         # set clangd to version 11 by default
-        sudo update-alternatives --install /usr/bin/clangd clangd /usr/bin/clangd-11 999
+        #sudo update-alternatives --install /usr/bin/clangd clangd /usr/bin/clangd-11 999
         sudo apt-get -y install libboost-all-dev
 
         cd ~/.vim/plugged/YouCompleteMe/
